@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import React, { useState, useEffect } from "react";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
@@ -7,25 +6,25 @@ import ToDoLists from "./ToDoLists";
 
 function App() {
 
-  const [InputItem, setInputItem] = useState("");
-  const [InputItem2, setInputItem2] = useState([]);
+  const [OldItem, setOldItem] = useState("");
+  const [NewItem, setNewItem] = useState([]);
 
   function inputEvent(e) {
-    setInputItem(e.target.value)
+    setOldItem(e.target.value)
   }
 
   function submit() {
-    setInputItem2((oldItem) => {
-      return [...oldItem, InputItem]
+    setNewItem((Item) => {
+      return [...Item, OldItem]
     });
-    setInputItem("");
+    setOldItem("");
   }
 
   function deleteItem(id){
     console.log("Item Deleted");
 
-    setInputItem2((oldItem) => {
-        return oldItem.filter((arrElement, index)=>{
+    setNewItem((element) => {
+        return element.filter((arrElement, index)=>{
           return index !== id;
         })
     })
@@ -41,7 +40,7 @@ function App() {
         <br />
 
         <div>
-          <input type="text" placeholder="Add Items" onChange={inputEvent} value={InputItem} />
+          <input type="text" placeholder="Add Items" onChange={inputEvent} value={OldItem} />
           <button onClick={submit}> + </button>
 
         </div>
@@ -50,10 +49,10 @@ function App() {
 
         <ol>
 
-          {/* <li>{InputItem2}</li> */}
+          {/* <li>{NewItem}</li> */}
 
           {
-            InputItem2.map((InputItemElement,index) => {
+            NewItem.map((InputItemElement,index) => {
             
               return <ToDoLists 
                 text = {InputItemElement} 
