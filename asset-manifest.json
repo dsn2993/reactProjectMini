@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/reactProjectMini/static/css/main.8f19b542.css",
+    "main.js": "/reactProjectMini/static/js/main.2354541b.js",
+    "static/js/787.28cb0dcd.chunk.js": "/reactProjectMini/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/reactProjectMini/index.html",
+    "main.8f19b542.css.map": "/reactProjectMini/static/css/main.8f19b542.css.map",
+    "main.2354541b.js.map": "/reactProjectMini/static/js/main.2354541b.js.map",
+    "787.28cb0dcd.chunk.js.map": "/reactProjectMini/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8f19b542.css",
+    "static/js/main.2354541b.js"
+  ]
+}
